@@ -183,8 +183,9 @@ def generate_xray_config(node, fallback_tag):
                 "settings": {
                     "name": "xray0",
                     "mtu": 1500,
-                    "autoRoute": True,
-                    "strictRoute": True
+                    "gateway": ["198.18.0.1/16"],
+                    "autoSystemRoutingTable": ["0.0.0.0/0"],
+                    "autoOutboundsInterface": "auto"
                 }
             },
             {
